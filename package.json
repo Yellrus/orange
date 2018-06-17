@@ -11,8 +11,7 @@
     "deploy": "cross-env NODE_ENV=production ./node_modules/.bin/gulp build && cross-env ./node_modules/.bin/gulp deploy",
     "build": "cross-env NODE_ENV=production npm start build",
     "img-opt": "cross-env folder=src/img npm start img:opt",
-    "lint-staged": "lint-staged",
-    "precommit": "lint-staged"
+    "lint-staged": "lint-staged"
   },
   "browserslist": [
     "> 1%",
