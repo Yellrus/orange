@@ -144,8 +144,7 @@ a {
   -webkit-text-decoration-skip: objects;
   transition: color 0.25s ease-in-out;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: $link-color--hover;
   }
 

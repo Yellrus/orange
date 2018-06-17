@@ -25,14 +25,86 @@ mixin news(mods)
         .news__items#news
           .news__wrap-item
             article.news__item.elevation
-              header.hews__header
+              a(href='#').news__article-link
+                header.news__header
+                  time.date
+                    .date__number 25
+                    .date__inner
+                      .date__mounth марта
+                      .date__day понедельник
+                  +label('#Новости', 'div')
+                .news__content
+                  .news__head
+                    h2.news__title
+                      | Консьерж-сервис Иннополиса отмечен профессиональной наградой
+                    p.news__desc
+                      | Команда консьерж-сервиса города Иннополис стала победителем международной программы индустрии контактных центров «Хрустальная Гарнитура» в номинации «Лучшая небольшая команда»
+                  figure.news__picture
+                    img(src='img/news.jpg', alt='')
+          .news__wrap-item
+            article.news__item.elevation
+              a(href='#').news__article-link
+                header.news__header
+                  time.date
+                    .date__number 9
+                    .date__inner
+                      .date__mounth марта
+                      .date__day понедельник
+                  +label('#отборвбизнесинкубатор', 'div')
+                .news__content
+                  .news__head
+                    h2.news__title
+                      | Консьерж-сервис Иннополиса отмечен профессиональной наградой
+                    p.news__desc
+                      | Команда консьерж-сервиса города Иннополис стала победителем международной программы индустрии контактных центров «Хрустальная Гарнитура» в номинации «Лучшая небольшая команда»
+                  figure.news__picture
+                    img(src='img/news.jpg', alt='')
+                footer.news__footer
+                  .news__wrap-btn
+                    +btn('Подать заявку', 'main, size_sm').news__btn
+
 
           .news__wrap-item
             article.news__item.elevation
-              header.hews__header
+              a(href='#').news__article-link
+                header.news__header
+                  time.date
+                    .date__number 9
+                    .date__inner
+                      .date__mounth марта
+                      .date__day понедельник
+                  +label('#отборвбизнесинкубатор', 'div')
+                .news__content
+                  .news__head
+                    h2.news__title
+                      | Консьерж-сервис Иннополиса отмечен профессиональной наградой
+                    p.news__desc
+                      | Команда консьерж-сервиса города Иннополис стала победителем международной программы индустрии контактных центров «Хрустальная Гарнитура» в номинации «Лучшая небольшая команда»
+                  figure.news__picture
+                footer.news__footer
+                  .news__wrap-btn
+                    +btn('Подать заявку', 'main, size_sm').news__btn
 
           .news__wrap-item
             article.news__item.elevation
-              header.hews__header
+              a(href='#').news__article-link
+                header.news__header
+                  time.date
+                    .date__number 9
+                    .date__inner
+                      .date__mounth марта
+                      .date__day понедельник
+                  +label('#отборвбизнесинкубатор', 'div')
+                .news__content
+                  .news__head
+                    h2.news__title
+                      | Консьерж-сервис Иннополиса отмечен профессиональной наградой
+                    p.news__desc
+                      | Команда консьерж-сервиса города Иннополис стала победителем международной программы индустрии контактных центров «Хрустальная Гарнитура» в номинации «Лучшая небольшая команда»
+                  figure.news__picture
+                footer.news__footer
+                  .news__wrap-btn
+
+          +btn('Все новости', 'main, size_sm').news__more-btn(href='')
 
         .news__bar

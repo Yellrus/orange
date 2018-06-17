@@ -69,7 +69,8 @@
     "link": [],
     "news": [],
     "heading": [],
-    "wrap": []
+    "wrap": [],
+    "date": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

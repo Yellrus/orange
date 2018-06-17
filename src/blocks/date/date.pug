@@ -1,12 +1,12 @@
-//- Все примеси в этом файле должны начинаться c имени блока (heading)
+//- Все примеси в этом файле должны начинаться c имени блока (date)
 
-mixin heading(text, mods)
+mixin date(text, mods)
 
   //- Принимает:
   //-   text    {string} - текст
   //-   mods    {string} - список модификаторов
   //- Вызов:
-        +heading('Текст', 'some-mod')
+        +date('Текст', 'some-mod')
 
   -
     // список модификаторов
@@ -14,8 +14,9 @@ mixin heading(text, mods)
     if(typeof(mods) !== 'undefined' && mods) {
       var modsList = mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' heading--' + modsList[i].trim();
+        allMods = allMods + ' date--' + modsList[i].trim();
       }
     }
 
-  h2.heading(class=allMods)&attributes(attributes)!= text
+  .date(class=allMods)&attributes(attributes)
+    .date__inner!= text

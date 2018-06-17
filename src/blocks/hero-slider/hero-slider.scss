@@ -96,6 +96,13 @@
   &__btn {
     margin-top: 42px;
 
+    .btn {
+
+      &:hover {
+        color: $white;
+      }
+    }
+
     &:empty {
       display: none;
     }

@@ -108,7 +108,7 @@ $transition-long: 0.5s ease;
 
     &:hover,
     &:focus {
-      color: #fff;
+      color: $text-color;
       background-color: transparent;
     }
 
@@ -125,8 +125,9 @@ $transition-long: 0.5s ease;
     padding: 1.19em 2.07em;
   }
 
-  &--size__sm {
+  &--size_sm {
     font-size: rem(14px);
     letter-spacing: 0.56px;
+    padding: 0.7em 1.6em;
   }
 }
