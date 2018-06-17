@@ -1,0 +1,86 @@
+//- Все примеси в этом файле должны начинаться c имени блока (hero-slider)
+
+mixin hero-slider(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +hero-slider('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' hero-slider--' + modsList[i].trim();
+      }
+    }
+
+  .swiper-container.hero-slider.loading
+    .swiper-wrapper
+
+      .swiper-slide.hero-slider__item
+        figure.hero-slider__bgimg(style='background-image:url(../img/hero.jpg)')
+          img.hero-slider__entity-img(src='../img/hero.jpg', alt='')
+        .hero-slider__content
+          .hero-slider__inner
+            h3.hero-slider__title(data-swiper-parallax='-120', data-swiper-parallax-opacity='0.15') Приём заявок на 32-й отбор в Бизнес-инкубатор
+            span.hero-slider__caption(data-swiper-parallax='-150', data-swiper-parallax-opacity='0.15')
+              | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            .hero-slider__btn(data-swiper-parallax='-200', data-swiper-parallax-opacity='0.15')
+              +btn('Подать заявку', 'main, size_lg')(href='#')
+
+      .swiper-slide.hero-slider__item
+        figure.hero-slider__bgimg(style='background-image:url(../img/hero-4.jpg)')
+          img.hero-slider__entity-img(src='../img/hero-2.jpg', alt='')
+        .hero-slider__content
+          .hero-slider__inner
+            h3.hero-slider__title(data-swiper-parallax='-120', data-swiper-parallax-opacity='0.15')  Прием президента РТ
+            span.hero-slider__caption(data-swiper-parallax='-150', data-swiper-parallax-opacity='0.15')
+              | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            .hero-slider__btn(data-swiper-parallax='-200', data-swiper-parallax-opacity='0.15')
+              +btn('Подать заявку', 'main, size_lg')(href='#')
+
+      .swiper-slide.hero-slider__item
+        figure.hero-slider__bgimg(style='background-image:url(../img/hero-3.jpg)')
+          img.hero-slider__entity-img(src='../img/hero-3.jpg', alt='')
+        .hero-slider__content
+          .hero-slider__inner
+            h3.hero-slider__title(data-swiper-parallax='-120', data-swiper-parallax-opacity='0.15') Прием короля Монако
+            span.hero-slider__caption(data-swiper-parallax='-150', data-swiper-parallax-opacity='0.15')
+              | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            .hero-slider__btn(data-swiper-parallax='-200', data-swiper-parallax-opacity='0.15')
+              +btn('Подать заявку', 'main, size_lg')
+
+      .swiper-slide.hero-slider__item
+        figure.hero-slider__bgimg(style='background-image:url(../img/hero-5.jpg)')
+          img.hero-slider__entity-img(src='../img/hero-5.jpg', alt='')
+        .hero-slider__content
+          .hero-slider__inner
+            h3.hero-slider__title(data-swiper-parallax='-120', data-swiper-parallax-opacity='0.15') Прием кого-то важного
+            span.hero-slider__caption(data-swiper-parallax='-150', data-swiper-parallax-opacity='0.15')
+              | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            .hero-slider__btn(data-swiper-parallax='-200', data-swiper-parallax-opacity='0.15')
+              +btn('Подать заявку', 'main, size_lg')(href='#')
+
+      .swiper-slide.hero-slider__item
+        figure.hero-slider__bgimg(style='background-image:url(../img/hero-2.jpg)')
+          img.hero-slider__entity-img(src='../img/hero-2.jpg', alt='')
+        .hero-slider__content
+          .hero-slider__inner
+            h3.hero-slider__title(data-swiper-parallax='-120', data-swiper-parallax-opacity='0.15') Очень кажное событие
+            span.hero-slider__caption(data-swiper-parallax='-150', data-swiper-parallax-opacity='0.15')
+              | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            .hero-slider__btn(data-swiper-parallax='-200', data-swiper-parallax-opacity='0.15')
+              +btn('Подать заявку', 'main, size_lg')(href='#')
+
+    .swiper-pagination.hero-slider__pagination
+    // Если нужны стрелки навигации
+    //.swiper-button-prev.swiper-button-white
+    //.swiper-button-next.swiper-button-white
+
+
+  .swiper-container.nav-slider.loading(style='display: none')
+

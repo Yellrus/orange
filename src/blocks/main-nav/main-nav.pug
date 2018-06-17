@@ -1,0 +1,38 @@
+//- Все примеси в этом файле должны начинаться c имени блока (main-nav)
+//- Структура меню — в main-nav.data.pug
+
+mixin main-nav(selectedID)
+
+  //- Принимает:
+  //-   selectedID {string} - id пункта меню (по умолчанию — из main-nav.data.pug)
+  //- Вызов:
+        +main-nav('1')
+
+  nav.main-nav#nav&attributes(attributes)
+    ul.main-nav__list
+      li.main-nav__item
+        a.main-nav__link(href='/') It Park
+      li.main-nav__item
+        a.main-nav__link(href='#') Дата-центр
+      li.main-nav__item
+        a.main-nav__link(href='#') Конференц-услуги
+      li.main-nav__item
+        a.main-nav__link(href='#') Бизнес-инкубатор
+      li.main-nav__item
+        a.main-nav__link(href='#') Отель
+      li.main-nav__item
+        a.main-nav__link(href='#') ИТ-разработка
+      li.main-nav__item
+        a.main-nav__link(href='#') Центр интеллектуальной собственности
+      li.main-nav__item
+        a.main-nav__link(href='#') ИТ-академия
+      li.main-nav__item
+        a.main-nav__link(href='#') Резидентство
+      li.main-nav__item
+        a.main-nav__link(href='#') Персонал
+      li.main-nav__item
+        a.main-nav__link(href='#') ИТ-кластер
+      li.main-nav__item
+        a.main-nav__link(href='#') Коворкинг
+
+

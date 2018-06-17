@@ -1,0 +1,38 @@
+//- Все примеси в этом файле должны начинаться c имени блока (news)
+
+mixin news(mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +news('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' news--' + modsList[i].trim();
+      }
+    }
+
+  section.news(class=allMods)&attributes(attributes)
+    .news__inner
+      +heading('Новости')
+      .news__grid
+        .news__items#news
+          .news__wrap-item
+            article.news__item.elevation
+              header.hews__header
+
+          .news__wrap-item
+            article.news__item.elevation
+              header.hews__header
+
+          .news__wrap-item
+            article.news__item.elevation
+              header.hews__header
+
+        .news__bar

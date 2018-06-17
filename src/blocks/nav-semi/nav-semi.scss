@@ -1,0 +1,38 @@
+// В этом файле должны быть стили для БЭМ-блока nav-semi, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.nav-semi {
+
+  $block-name:                &; // #{$block-name}__element
+  display: none;
+
+  @media (min-width: $screen-lg) {
+    display: block;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    color: $white-semi;
+    margin-right: 18px;
+  }
+
+  &__link {
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background-color: transparent;
+    color: #fffefe;
+    font-size: rem(16px);
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.64px;
+  }
+}

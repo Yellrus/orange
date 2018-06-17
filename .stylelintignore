@@ -1,0 +1,5 @@
+# перечисление игнорируемых stylelint-ом файлов
+src/blocks/sprite-png/sprite-png.scss
+src/blocks/page/page.scss
+src/blocks/typo/typo.scss
+src/blocks/hero-menu/hero-menu.scss

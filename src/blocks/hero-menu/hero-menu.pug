@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (hero-menu)
+
+mixin hero-menu(mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +hero-menu('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' hero-menu--' + modsList[i].trim();
+      }
+    }
+
+  .hero-menu(class=allMods)&attributes(attributes)
+    .hero-menu__inner
+      +main-nav(aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement")
