@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <meta content="notranslate" name="google">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <title>Главная IT Park &mdash; Казань</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if (isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if (typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--' + key;
+            if (typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if (isMobile[key][type]) rootClasses += ' is-mobile--' + key + '-' + type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      } else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+</head>
+
+<body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
+  <div class="page__inner">
+    <header class="page-header  page-header--home" role="banner">
+      <div class="page-header__inner">
+        <div class="page-header__top">
+          <div class="page-header__panel"><a class="logo" href="/"><img src="./img/logo-white.png" width="48" height="72" alt="It Park &amp;mdash; Казань"></a>
+            <div class="nav-semi">
+              <ul class="nav-semi__list">
+                <li class="nav-semi__item"><a class="nav-semi__link link link--bg" href="#">Дата-центр</a></li>
+                <li class="nav-semi__item"><a class="nav-semi__link link link--bg" href="#">Конференц-услуги</a></li>
+                <li class="nav-semi__item"><a class="nav-semi__link link link--bg" href="#">Бизнес-инкубатор</a></li>
+                <li class="nav-semi__item"><a class="nav-semi__link link link--bg" href="#">Отель</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="page-header__burger"><button class="burger" aria-label="Открыть/Закрыть меню" type="button"><span></span></button></div>
+        </div>
+        <div class="hero-menu">
+          <div class="hero-menu__inner">
+            <nav class="main-nav" id="nav" aria-label="Основное меню" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a class="main-nav__link" href="/">It Park</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Дата-центр</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Конференц-услуги</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Бизнес-инкубатор</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Отель</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">ИТ-разработка</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Центр интеллектуальной собственности</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">ИТ-академия</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Резидентство</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Персонал</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">ИТ-кластер</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="#">Коворкинг</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="swiper-container hero-slider loading">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide hero-slider__item">
+              <figure class="hero-slider__bgimg" style="background-image:url(../img/hero.jpg)"><img class="hero-slider__entity-img" src="../img/hero.jpg" alt="" /></figure>
+              <div class="hero-slider__content">
+                <div class="hero-slider__inner">
+                  <h3 class="hero-slider__title" data-swiper-parallax="-120" data-swiper-parallax-opacity="0.15">Приём заявок на 32-й отбор в Бизнес-инкубатор</h3><span class="hero-slider__caption" data-swiper-parallax="-150" data-swiper-parallax-opacity="0.15">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+                  <div class="hero-slider__btn" data-swiper-parallax="-200" data-swiper-parallax-opacity="0.15"><a class="btn  btn--main btn--size_lg" href="#">Подать заявку</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hero-slider__item">
+              <figure class="hero-slider__bgimg" style="background-image:url(../img/hero-4.jpg)"><img class="hero-slider__entity-img" src="../img/hero-2.jpg" alt="" /></figure>
+              <div class="hero-slider__content">
+                <div class="hero-slider__inner">
+                  <h3 class="hero-slider__title" data-swiper-parallax="-120" data-swiper-parallax-opacity="0.15"> Прием президента РТ</h3><span class="hero-slider__caption" data-swiper-parallax="-150" data-swiper-parallax-opacity="0.15">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+                  <div class="hero-slider__btn" data-swiper-parallax="-200" data-swiper-parallax-opacity="0.15"><a class="btn  btn--main btn--size_lg" href="#">Подать заявку</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hero-slider__item">
+              <figure class="hero-slider__bgimg" style="background-image:url(../img/hero-3.jpg)"><img class="hero-slider__entity-img" src="../img/hero-3.jpg" alt="" /></figure>
+              <div class="hero-slider__content">
+                <div class="hero-slider__inner">
+                  <h3 class="hero-slider__title" data-swiper-parallax="-120" data-swiper-parallax-opacity="0.15">Прием короля Монако</h3><span class="hero-slider__caption" data-swiper-parallax="-150" data-swiper-parallax-opacity="0.15">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+                  <div class="hero-slider__btn" data-swiper-parallax="-200" data-swiper-parallax-opacity="0.15"><button class="btn  btn--main btn--size_lg" type="button">Подать заявку</button></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hero-slider__item">
+              <figure class="hero-slider__bgimg" style="background-image:url(../img/hero-5.jpg)"><img class="hero-slider__entity-img" src="../img/hero-5.jpg" alt="" /></figure>
+              <div class="hero-slider__content">
+                <div class="hero-slider__inner">
+                  <h3 class="hero-slider__title" data-swiper-parallax="-120" data-swiper-parallax-opacity="0.15">Прием кого-то важного</h3><span class="hero-slider__caption" data-swiper-parallax="-150" data-swiper-parallax-opacity="0.15">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+                  <div class="hero-slider__btn" data-swiper-parallax="-200" data-swiper-parallax-opacity="0.15"><a class="btn  btn--main btn--size_lg" href="#">Подать заявку</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide hero-slider__item">
+              <figure class="hero-slider__bgimg" style="background-image:url(../img/hero-2.jpg)"><img class="hero-slider__entity-img" src="../img/hero-2.jpg" alt="" /></figure>
+              <div class="hero-slider__content">
+                <div class="hero-slider__inner">
+                  <h3 class="hero-slider__title" data-swiper-parallax="-120" data-swiper-parallax-opacity="0.15">Очень кажное событие</h3><span class="hero-slider__caption" data-swiper-parallax="-150" data-swiper-parallax-opacity="0.15">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+                  <div class="hero-slider__btn" data-swiper-parallax="-200" data-swiper-parallax-opacity="0.15"><a class="btn  btn--main btn--size_lg" href="#">Подать заявку</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination hero-slider__pagination"></div>
+          <!-- Если нужны стрелки навигации-->
+          <!--.swiper-button-prev.swiper-button-white-->
+          <!--.swiper-button-next.swiper-button-white-->
+        </div>
+        <div class="swiper-container nav-slider loading" style="display: none"></div>
+      </div>
+    </header>
+    <div class="page__content">
+
+      <section class="news">
+        <div class="news__inner">
+          <h1 class="heading">Новости</h1>
+          <div class="news__grid">
+            <div class="news__items" id="news">
+              <div class="news__wrap-item">
+
+                <article class="news__item elevation">
+                  <header class="hews__header">
+                    
+                  </header>
+                </article>
+
+              </div>
+              <div class="news__wrap-item">
+
+                <article class="news__item elevation">
+                  <header class="hews__header">
+                    
+                  </header>
+                </article>
+
+              </div>
+              <div class="news__wrap-item">
+
+                <article class="news__item elevation">
+                  <header class="hews__header">
+                    
+                  </header>
+                </article>
+
+              </div>
+            </div>
+            <div class="news__bar"></div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__inner">
+          <p>«Подвал»</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>
