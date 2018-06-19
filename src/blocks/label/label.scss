@@ -19,7 +19,7 @@ $border-radius:               rem(3px) !default;
   margin: 0 0.1em;
   vertical-align: middle;
   line-height: 1;
-  padding: 0.25em 0.4em 0.2em;
+  padding: 0.3em 0.63em;
   background-color: $gray-lightest;
   color: $text-color;
   text-decoration: none;
@@ -29,8 +29,16 @@ $border-radius:               rem(3px) !default;
 
   &:hover,
   &:focus {
-    color: $text-color;
     text-decoration: none;
+  }
+
+  &--size_md {
+    padding: 0.455em 0.78em;
+  }
+
+  &--btn {
+    cursor: pointer;
+    user-select: none;
   }
 
   &--active {

@@ -1,0 +1,47 @@
+//- Все примеси в этом файле должны начинаться c имени блока (ui-social)
+
+mixin ui-social(mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +ui-social('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' ui-social--' + modsList[i].trim();
+      }
+    }
+
+  .ui-social(class=allMods)&attributes(attributes)
+    .ui-social__inner
+      ul.ui-social__items
+        li.ui-social__item
+          a.ui-social__link(href='#', target='_blank', rel='noopener noreferrer')
+            svg.ui-social__icon(width="26", height="26")
+              use(xlink:href="img/sprite-svg.svg#instagram")
+        li.ui-social__item
+          a.ui-social__link(href='#', target='_blank', rel='noopener noreferrer')
+            svg.ui-social__icon(width='30', height='30')
+              use(xlink:href='img/sprite-svg.svg#vk')
+        li.ui-social__item
+          a.ui-social__link(href='#', target='_blank', rel='noopener noreferrer')
+            svg.ui-social__icon(width='28', height='28')
+              use(xlink:href='img/sprite-svg.svg#facebook')
+        li.ui-social__item
+          a.ui-social__link(href='#', target='_blank', rel='noopener noreferrer')
+            svg.ui-social__icon(width='30', height='30')
+              use(xlink:href='img/sprite-svg.svg#youtube')
+        li.ui-social__item
+          a.ui-social__link(href='#', target='_blank', rel='noopener noreferrer')
+            svg.ui-social__icon(width='28', height='28')
+              use(xlink:href='img/sprite-svg.svg#twitter')
+        li.ui-social__item
+          a.ui-social__link(href='#', target='_blank', rel='noopener noreferrer')
+            svg.ui-social__icon(width='30', height='30')
+              use(xlink:href='img/sprite-svg.svg#telegram')

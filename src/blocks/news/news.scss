@@ -1,4 +1,4 @@
-// В этом файле должны быть стили для БЭМ-блока news, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока news, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
@@ -21,6 +21,7 @@
 
     @media (min-width: $screen-xl) {
       display: flex;
+      align-items: flex-start;
     }
   }
 
@@ -28,17 +29,15 @@
     display: flex;
 
     @media (min-width: $screen-xl) {
-      width: 100%;
-      max-width: 808px;
-      margin-right: 24px;
+      display: flex;
       flex-direction: column;
+      justify-content: flex-start;
     }
   }
 
   &__bar {
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%;
-    background-color: #007aff;
+    width: 100%;
+    max-width: 392px;
     display: none;
 
     @media (min-width: $screen-xl) {
@@ -65,10 +64,7 @@
   &__wrap-item {
 
     @media (min-width: $screen-xl) {
-
-      &:not(:last-child) {
-        margin-bottom: rem(24px);
-      }
+      margin-bottom: rem(24px);
     }
   }
 
@@ -88,6 +84,10 @@
       font-size: rem(24px);
       line-height: 32px;
     }
+  }
+
+  &__desc {
+    margin-bottom: 0;
   }
 
   &__head {
@@ -114,9 +114,14 @@
     margin-bottom: 0;
     line-height: 0;
     display: none;
+    overflow: hidden;
 
     @media (min-width: $screen-xl) {
       display: block;
+      width: 100%;
+      max-height: 464px;
+      object-fit: cover;
+      object-position: center;
     }
 
     &:empty {
@@ -124,20 +129,50 @@
     }
   }
 
-  &__wrap-btn {
+  &__footer {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    padding: 25px 25px 32px 25px;
+    justify-content: flex-end;
+    padding: 0 25px;
 
-    &:empty {
+     &:empty {
       display: none;
     }
+  }
+
+  &__content {
+
+     @media (min-width: $screen-xl) {
+      width: 100%;
+      max-width: 808px;
+      margin-right: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  &__btn {
+    margin: 0 0 32px 0;
   }
 
   &__more-btn {
-    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 43px;
     margin-right: rem(25px);
     margin-top: 24px;
+  }
+
+  &__bar-item {
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__socials-inner {
+    padding: 0 24px 0 16px;
   }
 }

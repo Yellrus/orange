@@ -1,14 +1,12 @@
-// В этом файле должны быть стили для БЭМ-блока elevation, его элементов,
+// В этом файле должны быть стили для БЭМ-блока title, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.elevation {
+.title {
 
   $block-name:                &; // #{$block-name}__element
-  box-shadow: $card-shadow;
-  transition: box-shadow 0.3s ease-in-out;
 
-  &:hover {
-    box-shadow: $card-shadow--hover;
-  }
+  color: rgba($text-color, 0.5);
+  font-size: rem(16px);
+  margin-bottom: rem(12px);
 }

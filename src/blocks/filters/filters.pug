@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (filters)
+
+mixin filters(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +filters('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' filters--' + modsList[i].trim();
+      }
+    }
+
+  .filters(class=allMods)&attributes(attributes)
+    .filters__inner!= text

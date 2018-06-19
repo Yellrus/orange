@@ -41,6 +41,7 @@ $transition-long: 0.5s ease;
   transition: $transition-btn;
   letter-spacing: 0.6px;
   cursor: pointer;
+  outline: none;
 
   &::before,
   &::after {
@@ -50,7 +51,7 @@ $transition-long: 0.5s ease;
     right: 0;
     height: 2px;
     width: 0;
-    background: darken($color-main, 10);
+    background-color: $color-main;
     transition: all 0.4s ease;
   }
 
@@ -78,10 +79,10 @@ $transition-long: 0.5s ease;
   //  color: $text-color;
   //}
 
-  &:active,
-  &:focus {
-    @include field-focus;
-  }
+  // &:active,
+  // &:focus {
+  //   @include field-focus;
+  // }
 
   &--disabled,
   &:disabled {
@@ -119,15 +120,31 @@ $transition-long: 0.5s ease;
     }
   }
 
+  &--transparent {
+    background-color: transparent;
+    border: 1px solid rgba(#252525, 0.12);
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
   &--size_lg {
     font-size: rem(16px);
     letter-spacing: 0.64px;
     padding: 1.19em 2.07em;
   }
 
+  &--size_md {
+    font-size: rem(14px);
+    letter-spacing: 0.56px;
+    padding: 0.7em 1.45em 0.6em;
+  }
+
   &--size_sm {
     font-size: rem(14px);
     letter-spacing: 0.56px;
-    padding: 0.7em 1.6em;
+    //padding: 0.7em 1.6em;
+    padding: 0.83em 1.6em 0.6em;
   }
 }
