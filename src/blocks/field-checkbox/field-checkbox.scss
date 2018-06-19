@@ -2,13 +2,12 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-$line-height:                 1.5 !default;
+$line-height: 1.5 !default;
 
-$border-radius:               rem(3px) !default;
+$border-radius: rem(3px) !default;
 
 .field-checkbox {
-
-  $block-name:                &; // #{$block-name}__element
+  $block-name: &; // #{$block-name}__element
 
   display: block;
   margin-bottom: 1rem;
@@ -29,71 +28,66 @@ $border-radius:               rem(3px) !default;
 
   &__name {
     position: relative;
-    display: inline-block;
-    padding-left: 1.5em;
-    margin-right: 0.6em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     font-weight: 400;
     line-height: $line-height;
+    cursor: pointer;
+    transform: translate3d(0, 0, 0);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: rem(-15px);
+      left: rem(-15px);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(34, 50, 84, 0.03);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    svg {
+      position: relative;
+      z-index: 1;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke: #e0e0e0;
+      stroke-width: 1.5;
+      transform: translate3d(0, 0, 0);
+      transition: all 0.2s ease;
+    }
+
+    svg path {
+      stroke-dasharray: 60;
+      stroke-dashoffset: 0;
+    }
+
+    svg polyline {
+      stroke-dasharray: 22;
+      stroke-dashoffset: 66;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+
+      svg {
+        stroke: $color-main;
+      }
+    }
   }
 
   &__name-text {
-    display: inline-block;
-
-    // свой чекбокс с картинкой
-
-    // &:before {
-    //   content: '';
-    //   position: absolute;
-    //   top: rem(5px);
-    //   left: 0;
-    //   width: rem(14px);
-    //   height: rem(14px);
-    //   background-image: svg-load('../blocks/field-checkbox/bg-img/checkbox.svg');
-    //   background-size: 100%;
-    // }
-    // @at-root input:checked ~ &:before {
-    //   background-image: svg-load('../blocks/field-checkbox/bg-img/checkbox--checked.svg');
-    // }
-
-    // / свой чекбокс с картинкой
-
-    // свой чекбокс без картинок
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: rem(5px);
-      left: 0;
-      width: rem(14px);
-      height: rem(14px);
-      border: 2px solid currentColor;
-      border-radius: $border-radius;
-    }
-
-    @at-root input:focus ~ &:before {
-      @include field-focus;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: rem(6px);
-      left: 3px;
-      width: rem(14px);
-      height: rem(6px);
-      opacity: 0;
-      border-left: 2px solid currentColor;
-      border-bottom: 2px solid currentColor;
-      transform: rotate(-45deg);
-      transition: opacity $transition-time;
-      box-shadow: 1px 2px 0 #fff, inset 0 -2px 0 #fff;
-
-      @at-root input:checked ~ & {
-        opacity: 1;
-      }
-    }
-
-    // / свой чекбокс без картинок
+    display: block;
+    font-family: inherit;
+    font-size: rem(13px);
+    font-weight: 400;
+    margin-left: rem(8px);
   }
 
   &__input {
@@ -103,14 +97,22 @@ $border-radius:               rem(3px) !default;
     padding: 0;
     margin: 0;
     transform: translateY(-50%);
+    display: none;
 
-    &:focus,
-    &:active {
-      @include field-focus;
+    &:checked + .field-checkbox__name svg {
+      stroke: $color-main;
     }
 
-    // сокрытие инпута в случае использования своего чекбокса
-    opacity: 0;
+    &:checked + .field-checkbox__name svg path {
+      stroke-dashoffset: 60;
+      transition: all 0.3s linear;
+    }
+
+    &:checked + .field-checkbox__name svg polyline {
+      stroke-dashoffset: 42;
+      transition: all 0.2s linear;
+      transition-delay: 0.15s;
+    }
   }
 
   &__help-text-wrap {

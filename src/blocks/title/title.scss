@@ -9,4 +9,9 @@
   color: rgba($text-color, 0.5);
   font-size: rem(16px);
   margin-bottom: rem(12px);
+  text-align: center;
+
+  @media (min-width: $screen-xl) {
+    text-align: left;
+  }
 }

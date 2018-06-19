@@ -20,7 +20,7 @@ mixin subscribe(mods)
 
   .subscribe.elevation(class=allMods)&attributes(attributes)
     .subscribe__inner
-      +form().subscribe__form
+      +form().subscribe__form(method='POST', action='#')
         fieldset.form__fieldset
           legend.form__legend.sr-only Выбор подписки
           +field-text({
@@ -30,31 +30,115 @@ mixin subscribe(mods)
             }
           })
 
-        +field-checkbox([
-          {
-            title: 'Мероприятие',
-            helpText: '',
-            attrs: {
-              name: 'check0',
-            }
-          },
-        ])
+        .subscribe__checks
+          .subscribe__col
+            .field-checkbox
+              .field-checkbox__input-wrap
+                input.field-checkbox__input#checkEvent(type='checkbox', name='event')
+                label.field-checkbox__name(for='checkEvent')
+                  svg(width='16px', height='16px', viewbox='0 0 18 18')
+                    path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
+                    polyline(points='1 9 7 14 15 4')
+                  span.field-checkbox__name-text Мероприятие
 
-        input#cbx(type='checkbox', style='display: none;')
-        label.check(for='cbx')
-          svg(width='18px', height='18px', viewbox='0 0 18 18')
-            path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
-            polyline(points='1 9 7 14 15 4')
-        input#cbx(type='checkbox', style='display: none;')
-        label.check(for='cbx')
-          svg(width='18px', height='18px', viewbox='0 0 18 18')
-            path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
-            polyline(points='1 9 7 14 15 4')
-        input#cbx(type='checkbox', style='display: none;')
-        label.check(for='cbx')
-          svg(width='18px', height='18px', viewbox='0 0 18 18')
-            path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
-            polyline(points='1 9 7 14 15 4')
+            .field-checkbox
+              .field-checkbox__input-wrap
+                input.field-checkbox__input#checkSelectionBusiness(type='checkbox', name='selectionInBusiness')
+                label.field-checkbox__name(for='checkSelectionBusiness')
+                  svg(width='16px', height='16px', viewbox='0 0 18 18')
+                    path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
+                    polyline(points='1 9 7 14 15 4')
+                  span.field-checkbox__name-text Отбор в Бизнес-Инкубатор
 
+            .field-checkbox
+              .field-checkbox__input-wrap
+                input.field-checkbox__input#checkPhoto(type='checkbox', name='dataCenter')
+                label.field-checkbox__name(for='checkPhoto')
+                  svg(width='16px', height='16px', viewbox='0 0 18 18')
+                    path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
+                    polyline(points='1 9 7 14 15 4')
+                  span.field-checkbox__name-text Фото
+
+            .field-checkbox
+              .field-checkbox__input-wrap
+                input.field-checkbox__input#checkPhoto(type='checkbox', name='news')
+                label.field-checkbox__name(for='checkNews')
+                  svg(width='16px', height='16px', viewbox='0 0 18 18')
+                    path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
+                    polyline(points='1 9 7 14 15 4')
+                  span.field-checkbox__name-text Новости
+
+            .field-checkbox
+              .field-checkbox__input-wrap
+                input.field-checkbox__input#checkWork(type='checkbox', name='work')
+                label.field-checkbox__name(for='checkWokrk')
+                  svg(width='16px', height='16px', viewbox='0 0 18 18')
+                    path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
+                    polyline(points='1 9 7 14 15 4')
+                  span.field-checkbox__name-text Работа
+
+            .field-checkbox
+              .field-checkbox__input-wrap
+                input.field-checkbox__input#checkTraining(type='checkbox', name='training')
+                label.field-checkbox__name(for='checkTraining')
+                  svg(width='16px', height='16px', viewbox='0 0 18 18')
+                    path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
+                    polyline(points='1 9 7 14 15 4')
+                  span.field-checkbox__name-text Обучение
+
+          .subscribe__col
+            .field-checkbox
+              .field-checkbox__input-wrap
+                input.field-checkbox__input#checkBusiness(type='checkbox', name='business')
+                label.field-checkbox__name(for='checkBusiness')
+                  svg(width='16px', height='16px', viewbox='0 0 18 18')
+                    path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
+                    polyline(points='1 9 7 14 15 4')
+                  span.field-checkbox__name-text Бизнес-Инкубатор
+
+            .field-checkbox
+              .field-checkbox__input-wrap
+                input.field-checkbox__input#checkDataCenter(type='checkbox', name='dataCenter')
+                label.field-checkbox__name(for='checkDataCenter')
+                  svg(width='16px', height='16px', viewbox='0 0 18 18')
+                    path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
+                    polyline(points='1 9 7 14 15 4')
+                  span.field-checkbox__name-text Дата-Центр
+
+            .field-checkbox
+              .field-checkbox__input-wrap
+                input.field-checkbox__input#checkConferenceServices(type='checkbox', name='conferenceServices')
+                label.field-checkbox__name(for='checkConferenceServices')
+                  svg(width='16px', height='16px', viewbox='0 0 18 18')
+                    path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
+                    polyline(points='1 9 7 14 15 4')
+                  span.field-checkbox__name-text Конференц-услуги
+
+            .field-checkbox
+              .field-checkbox__input-wrap
+                input.field-checkbox__input#checkItHotel(type='checkbox', name='itHotel')
+                label.field-checkbox__name(for='checkItHotel')
+                  svg(width='16px', height='16px', viewbox='0 0 18 18')
+                    path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
+                    polyline(points='1 9 7 14 15 4')
+                  span.field-checkbox__name-text ИТ-Отель
+
+            .field-checkbox
+              .field-checkbox__input-wrap
+                input.field-checkbox__input#checkResidency(type='checkbox', name='residency')
+                label.field-checkbox__name(for='checkResidency')
+                  svg(width='16px', height='16px', viewbox='0 0 18 18')
+                    path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
+                    polyline(points='1 9 7 14 15 4')
+                  span.field-checkbox__name-text Резидентство
+
+            .field-checkbox
+              .field-checkbox__input-wrap
+                input.field-checkbox__input#checkItAcademy(type='checkbox', name='itAcademy')
+                label.field-checkbox__name(for='checkItAcademy')
+                  svg(width='16px', height='16px', viewbox='0 0 18 18')
+                    path(d='M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z')
+                    polyline(points='1 9 7 14 15 4')
+                  span.field-checkbox__name-text ИТ-Академия
 
         +btn('Подписаться', 'main, size_sm', true).subscribe__btn
