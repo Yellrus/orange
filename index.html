@@ -232,7 +232,7 @@
             </div>
             <div class="news__bar sidebar" id="newsBar">
               <div class="sidebar__inner">
-                <div class="news__bar-item">
+                <div class="news__bar-item news__filters">
                   <div class="filters elevation">
                     <div class="filters__inner">
                       <div class="title">Популярное сейчас</div>
@@ -337,12 +337,51 @@
                   <h4 class="title sr-only">Подписка на новости</h4>
                   <div class="subscribe elevation">
                     <div class="subscribe__inner">
-                      <form class="form subscribe__form">
+                      <form class="form subscribe__form" method="POST" action="#">
                         <fieldset class="form__fieldset">
                           <legend class="form__legend sr-only">Выбор подписки</legend><label class="field-text"><span class="field-text__input-wrap"><input class="field-text__input" type="email" placeholder="Введите ваш email"/></span></label></fieldset>
-                        <div class="field-checkbox">
-                          <div class="field-checkbox__input-wrap"><label class="field-checkbox__name"><input class="field-checkbox__input" type="checkbox" name="check0"/><span class="field-checkbox__name-text">Мероприятие</span></label></div>
-                        </div><input id="cbx" type="checkbox" style="display: none;" /><label class="check" for="cbx"><svg width="18px" height="18px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg></label><input id="cbx" type="checkbox" style="display: none;" /><label class="check" for="cbx"><svg width="18px" height="18px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg></label><input id="cbx" type="checkbox" style="display: none;" /><label class="check" for="cbx"><svg width="18px" height="18px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg></label><button class="btn  btn--main btn--size_sm subscribe__btn" type="submit">Подписаться</button></form>
+                        <div class="subscribe__checks">
+                          <div class="subscribe__col">
+                            <div class="field-checkbox">
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkEvent" type="checkbox" name="event" /><label class="field-checkbox__name" for="checkEvent"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Мероприятие</span></label></div>
+                            </div>
+                            <div class="field-checkbox">
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkSelectionBusiness" type="checkbox" name="selectionInBusiness" /><label class="field-checkbox__name" for="checkSelectionBusiness"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Отбор в Бизнес-Инкубатор</span></label></div>
+                            </div>
+                            <div class="field-checkbox">
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkPhoto" type="checkbox" name="dataCenter" /><label class="field-checkbox__name" for="checkPhoto"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Фото</span></label></div>
+                            </div>
+                            <div class="field-checkbox">
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkPhoto" type="checkbox" name="news" /><label class="field-checkbox__name" for="checkNews"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Новости</span></label></div>
+                            </div>
+                            <div class="field-checkbox">
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkWork" type="checkbox" name="work" /><label class="field-checkbox__name" for="checkWokrk"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Работа</span></label></div>
+                            </div>
+                            <div class="field-checkbox">
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkTraining" type="checkbox" name="training" /><label class="field-checkbox__name" for="checkTraining"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Обучение</span></label></div>
+                            </div>
+                          </div>
+                          <div class="subscribe__col">
+                            <div class="field-checkbox">
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkBusiness" type="checkbox" name="business" /><label class="field-checkbox__name" for="checkBusiness"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Бизнес-Инкубатор</span></label></div>
+                            </div>
+                            <div class="field-checkbox">
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkDataCenter" type="checkbox" name="dataCenter" /><label class="field-checkbox__name" for="checkDataCenter"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Дата-Центр</span></label></div>
+                            </div>
+                            <div class="field-checkbox">
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkConferenceServices" type="checkbox" name="conferenceServices" /><label class="field-checkbox__name" for="checkConferenceServices"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Конференц-услуги</span></label></div>
+                            </div>
+                            <div class="field-checkbox">
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkItHotel" type="checkbox" name="itHotel" /><label class="field-checkbox__name" for="checkItHotel"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">ИТ-Отель</span></label></div>
+                            </div>
+                            <div class="field-checkbox">
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkResidency" type="checkbox" name="residency" /><label class="field-checkbox__name" for="checkResidency"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Резидентство</span></label></div>
+                            </div>
+                            <div class="field-checkbox">
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkItAcademy" type="checkbox" name="itAcademy" /><label class="field-checkbox__name" for="checkItAcademy"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">ИТ-Академия</span></label></div>
+                            </div>
+                          </div>
+                        </div><button class="btn  btn--main btn--size_sm subscribe__btn" type="submit">Подписаться</button></form>
                     </div>
                   </div>
                 </div>
