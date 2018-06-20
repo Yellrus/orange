@@ -1,0 +1,94 @@
+//- Все примеси в этом файле должны начинаться c имени блока (assistant)
+
+mixin assistant(mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +assistant('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' assistant--' + modsList[i].trim();
+      }
+    }
+
+  section.assistant(class=allMods)&attributes(attributes)
+    .assistant__inner.wrap
+      .assistant__head
+        +heading('Как мы помогаем')
+        button.btn.btn--toggle.assistant__toggle.toggle-grid(type='button')
+          svg.btn__toggle-icon(width='25', height='25')
+            use(xlink:href='img/sprite-svg.svg#grid-three')
+      .assistant__grid
+        a.assistant__item.elevation(href='#')
+          .assistant__icon
+            svg.ui-social__icon(width='50', height='50')
+              use(xlink:href='img/sprite-svg.svg#hotel')
+          h5.assistant__title
+            | ИТ-Отель
+        a.assistant__item.elevation(href='#')
+          .assistant__icon
+            svg.ui-social__icon(width='50', height='50')
+              use(xlink:href='img/sprite-svg.svg#hotel')
+          h5.assistant__title
+            | Посетить мастер-класс
+        a.assistant__item.elevation(href='#')
+          .assistant__icon
+            svg.ui-social__icon(width='50', height='50')
+              use(xlink:href='img/sprite-svg.svg#hotel')
+          h5.assistant__title
+            | Найти сотрудника
+        a.assistant__item.elevation(href='#')
+          .assistant__icon
+            svg.ui-social__icon(width='50', height='50')
+              use(xlink:href='img/sprite-svg.svg#hotel')
+          h5.assistant__title
+            | Снять место в коворкинге
+        a.assistant__item.elevation(href='#')
+          .assistant__icon
+            svg.ui-social__icon(width='50', height='50')
+              use(xlink:href='img/sprite-svg.svg#hotel')
+          h5.assistant__title
+            | Арендовать офис
+        a.assistant__item.elevation(href='#')
+          .assistant__icon
+            svg.ui-social__icon(width='50', height='50')
+              use(xlink:href='img/sprite-svg.svg#hotel')
+          h5.assistant__title
+            | Прокачать стартап
+        a.assistant__item.elevation(href='#')
+          .assistant__icon
+            svg.ui-social__icon(width='50', height='50')
+              use(xlink:href='img/sprite-svg.svg#hotel')
+          h5.assistant__title
+            | Найти работу
+        a.assistant__item.elevation(href='#')
+          .assistant__icon
+            svg.ui-social__icon(width='50', height='50')
+              use(xlink:href='img/sprite-svg.svg#hotel')
+          h5.assistant__title
+            | Защитить интеллектуальную собственность
+        a.assistant__item.elevation(href='#')
+          .assistant__icon
+            svg.ui-social__icon(width='50', height='50')
+              use(xlink:href='img/sprite-svg.svg#hotel')
+          h5.assistant__title
+            | Провести бизнес-мероприятие
+        a.assistant__item.elevation(href='#')
+          .assistant__icon
+            svg.ui-social__icon(width='50', height='50')
+              use(xlink:href='img/sprite-svg.svg#hotel')
+          h5.assistant__title
+            | Купить хостинг
+        a.assistant__item.elevation(href='#')
+          .assistant__icon
+            svg.ui-social__icon(width='50', height='50')
+              use(xlink:href='img/sprite-svg.svg#hotel')
+          h5.assistant__title
+            | Проинвестировать в ИТ-проект

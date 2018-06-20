@@ -6,31 +6,20 @@
 
   $block-name:                &; // #{$block-name}__element
   position: relative;
-  max-width: 1224px;
-  margin: 0 auto;
-  padding-bottom: rem(7px);
+  padding-bottom: rem(13px);
   margin-bottom: rem(30px);
   font-size: rem(30px);
-  margin-left: 18px;
-  margin-right: 18px;
   color: $color-heading;
 
   @media (min-width: $screen-md) {
     font-size: rem(48px);
-    margin-left: 30px;
-    margin-right: 30px;
     margin-bottom: rem(50px);
+    padding-bottom: rem(17px);
   }
-
-  @media (min-width: $screen-xl) {
-    padding: 0 0 rem(7px) 0;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
 
   &::before {
     content: '';
+    display: block;
     position: absolute;
     bottom: 0;
     left: 0;

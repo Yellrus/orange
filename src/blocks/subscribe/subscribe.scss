@@ -8,7 +8,11 @@
 
   &__inner {
     position: relative;
-    padding: 24px;
+    padding: rem(24px) rem(18px);
+
+    @media (min-width: $screen-xl) {
+      padding: rem(24px);
+    }
   }
 
   &__form {

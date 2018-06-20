@@ -20,7 +20,8 @@ mixin news(mods)
 
   section.news(class=allMods)&attributes(attributes)
     .news__inner
-      +heading('Новости')
+      .news__heading
+        +heading('Новости')
       .news__grid#newsContent
         .news__content
           .news__items#news

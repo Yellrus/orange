@@ -57,6 +57,25 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
   });
 }
 
+// toggle grid
+var grid = true;
+$(".toggle-grid").on("click", function() {
+  if (grid === true) {
+    $(this)
+      .find("use")
+      .attr("xlink:href", "img/sprite-svg.svg#grid-two");
+    grid = false;
+
+    $(".assistant__grid").addClass("assistant__grid--row_two");
+  } else {
+    $(this)
+      .find("use")
+      .attr("xlink:href", "img/sprite-svg.svg#grid-three");
+    $(".assistant__grid").removeClass("assistant__grid--row_two");
+    grid = true;
+  }
+});
+
 // var sidebar = new StickySidebar('#sidebar', {
 //   containerSelector: '#main-content',
 //   innerWrapperSelector: '.sidebar__inner',

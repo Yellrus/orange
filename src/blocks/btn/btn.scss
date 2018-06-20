@@ -16,7 +16,6 @@ $transition-btn: 0.25s ease-in-out;
 $transition-long: 0.5s ease;
 
 .btn {
-
   $block-name: &; // #{$block-name}__element
 
   box-sizing: border-box;
@@ -43,36 +42,15 @@ $transition-long: 0.5s ease;
   cursor: pointer;
   outline: none;
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2px;
-    width: 0;
-    background-color: $color-main;
-    transition: all 0.4s ease;
-  }
-
-  &::after {
-    right: inherit;
-    top: inherit;
-    left: 0;
-    bottom: 0;
-  }
-
-  &:hover::before,
-  &:hover::after {
-    width: 100%;
-    transition: all 0.7s ease;
-  }
-
   &:hover,
   &:focus {
     text-decoration: none;
     color: $text-color;
     background-color: transparent;
+  }
+
+  &__toggle-icon {
+    fill: rgba($text-color, 0.3);
   }
 
   //&:visited {
@@ -113,6 +91,31 @@ $transition-long: 0.5s ease;
       background-color: transparent;
     }
 
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2px;
+      width: 0;
+      background-color: $color-main;
+      transition: all 0.4s ease;
+    }
+
+    &::after {
+      right: inherit;
+      top: inherit;
+      left: 0;
+      bottom: 0;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      width: 100%;
+      transition: all 0.7s ease;
+    }
+
     &--disabled,
     &:disabled {
       color: #fff;
@@ -125,7 +128,8 @@ $transition-long: 0.5s ease;
     border: 1px solid rgba(#252525, 0.12);
 
     &:hover {
-      border-color: transparent;
+      background-color: #252525;
+      color: #ffffff;
     }
   }
 
@@ -146,5 +150,10 @@ $transition-long: 0.5s ease;
     letter-spacing: 0.56px;
     //padding: 0.7em 1.6em;
     padding: 0.83em 1.6em 0.6em;
+  }
+
+  &--toggle {
+    background-color: transparent;
+    border: none;
   }
 }

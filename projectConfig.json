@@ -75,7 +75,8 @@
     "ui-social": [],
     "subscribe": [],
     "title": [],
-    "sidebar": []
+    "sidebar": [],
+    "assistant": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
