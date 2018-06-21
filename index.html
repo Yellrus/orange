@@ -354,10 +354,10 @@
                               <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkPhoto" type="checkbox" name="dataCenter" /><label class="field-checkbox__name" for="checkPhoto"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Фото</span></label></div>
                             </div>
                             <div class="field-checkbox">
-                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkPhoto" type="checkbox" name="news" /><label class="field-checkbox__name" for="checkNews"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Новости</span></label></div>
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkNews" type="checkbox" name="news" /><label class="field-checkbox__name" for="checkNews"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Новости</span></label></div>
                             </div>
                             <div class="field-checkbox">
-                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkWork" type="checkbox" name="work" /><label class="field-checkbox__name" for="checkWokrk"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Работа</span></label></div>
+                              <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkWork" type="checkbox" name="work" /><label class="field-checkbox__name" for="checkWork"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Работа</span></label></div>
                             </div>
                             <div class="field-checkbox">
                               <div class="field-checkbox__input-wrap"><input class="field-checkbox__input" id="checkTraining" type="checkbox" name="training" /><label class="field-checkbox__name" for="checkTraining"><svg width="16px" height="16px" viewbox="0 0 18 18"><path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path><polyline points="1 9 7 14 15 4"></polyline></svg><span class="field-checkbox__name-text">Обучение</span></label></div>
@@ -490,7 +490,611 @@
         </div>
       </section>
 
-      <!--p(style='height: 60vh; background-color: purple;')-->
+      <div class="events">
+        <div class="events__inner">
+          <div class="events__heading">
+            <h2 class="heading">Календарь мероприятий</h2>
+          </div>
+          <div class="events__grid">
+            <div class="events__items" id="events">
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewBox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-ac" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="47%" y="35%" fill="#fff">ac</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/news.jpg" mask="url(#mask-ac)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewbox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-bi" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="53%" y="43%" fill="#fff">bi</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/hero-4.jpg" mask="url(#mask-bi)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewBox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-ac" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="47%" y="35%" fill="#fff">ac</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/news.jpg" mask="url(#mask-ac)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewbox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-bi" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="53%" y="43%" fill="#fff">bi</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/hero-4.jpg" mask="url(#mask-bi)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewBox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-ac" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="47%" y="35%" fill="#fff">ac</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/news.jpg" mask="url(#mask-ac)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewbox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-bi" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="53%" y="43%" fill="#fff">bi</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/hero-4.jpg" mask="url(#mask-bi)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewBox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-ac" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="47%" y="35%" fill="#fff">ac</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/news.jpg" mask="url(#mask-ac)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewbox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-bi" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="53%" y="43%" fill="#fff">bi</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/hero-4.jpg" mask="url(#mask-bi)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewBox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-ac" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="47%" y="35%" fill="#fff">ac</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/news.jpg" mask="url(#mask-ac)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewbox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-bi" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="53%" y="43%" fill="#fff">bi</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/hero-4.jpg" mask="url(#mask-bi)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewBox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-ac" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="47%" y="35%" fill="#fff">ac</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/news.jpg" mask="url(#mask-ac)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewbox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-bi" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="53%" y="43%" fill="#fff">bi</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/hero-4.jpg" mask="url(#mask-bi)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewBox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-ac" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="47%" y="35%" fill="#fff">ac</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/news.jpg" mask="url(#mask-ac)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewbox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-bi" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="53%" y="43%" fill="#fff">bi</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/hero-4.jpg" mask="url(#mask-bi)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewBox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-ac" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="47%" y="35%" fill="#fff">ac</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/news.jpg" mask="url(#mask-ac)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewbox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-bi" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="53%" y="43%" fill="#fff">bi</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/hero-4.jpg" mask="url(#mask-bi)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewBox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-ac" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="47%" y="35%" fill="#fff">ac</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/news.jpg" mask="url(#mask-ac)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewbox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-bi" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="53%" y="43%" fill="#fff">bi</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/hero-4.jpg" mask="url(#mask-bi)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewBox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-ac" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="47%" y="35%" fill="#fff">ac</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/news.jpg" mask="url(#mask-ac)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewbox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-bi" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="53%" y="43%" fill="#fff">bi</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/hero-4.jpg" mask="url(#mask-bi)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewBox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-ac" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="47%" y="35%" fill="#fff">ac</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/news.jpg" mask="url(#mask-ac)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="events__wrap-item">
+
+                <article class="events__item elevation">
+                  <div class="events__head"><a class="events__day" href="#">1 день</a><a class="events__day" href="#">2 день</a></div>
+                  <div class="events__body">
+                    <div class="events__date">
+                      <div class="events__date-item events__date-item--ball">25 марта, понедельник</div>
+                      <div class="events__date-item">13:00</div>
+                    </div>
+                    <h3 class="events__title">Первый образовательный хакатон среди школьников</h3><a class="btn  btn--main btn--size_sm" href="#">Участвовать</a></div>
+                  <div class="events__show text-show">
+                    <svg viewbox="0 0 200 200">
+                      <defs>
+                        <mask class="text-show__mask" id="mask-bi" x="0" y="0" width="100%" height="300"><text class="text-show__name" x="53%" y="43%" fill="#fff">bi</text></mask>
+                      </defs>
+                      <image class="text-show__img" width="300" height="100" xlink:href="img/hero-4.jpg" mask="url(#mask-bi)" x="0" y="0"></image>
+                    </svg>
+                  </div>
+                  <div class="events__footer">
+                    <div class="events__tags">
+                      <div class="label">Программирование</div>
+                      <div class="label">ИТ-Академия</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="page__footer-wrapper">
       <footer class="page-footer" role="contentinfo">
