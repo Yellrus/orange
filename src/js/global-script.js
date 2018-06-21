@@ -1,9 +1,8 @@
 //Если на проекте jQuery
 $(document).ready(function() {
-  if (window.matchMedia("(max-width: 1200px)").matches) {
+  if (isMobile.any) {
     var slider = tns({
       container: "#news",
-      items: 1,
       edgePadding: 14,
       gutter: 9,
       rewind: true,
@@ -56,6 +55,42 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
     bottomSpacing: 40
   });
 }
+
+// events calendar carousel
+var slider = tns({
+  container: "#events",
+  loop: true,
+  edgePadding: 16,
+  mouseDrag: true,
+  items: 1,
+  gutter: 16,
+  //startIndex: 2,
+  speed: 500,
+  nav: false,
+  controls: false,
+
+  responsive: {
+    560: {
+      items: 2,
+      edgePadding: 60,
+      gutter: 24
+    },
+
+    1024: {
+      items: 2,
+      edgePadding: 60
+    },
+
+    // 1200: {
+    //   items: 2
+    // },
+
+    1600: {
+      items: 2,
+      edgePadding: 315
+    }
+  }
+});
 
 // toggle grid
 var grid = true;

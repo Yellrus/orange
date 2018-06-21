@@ -76,7 +76,8 @@
     "subscribe": [],
     "title": [],
     "sidebar": [],
-    "assistant": []
+    "assistant": [],
+    "events": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
