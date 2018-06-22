@@ -4104,38 +4104,70 @@
             <div class="blocks-library__code">
               <pre class="code">
 <code>//- Pug-файл этого блока:</code>
-<code>//- Все примеси в этом файле должны начинаться c имени блока (modal)</code>
-<code>&nbsp;</code>
-<code>mixin modal(id, title, mods)</code>
-<code>&nbsp;</code>
-<code>  //- Принимает:</code>
-<code>  //-   id      {string} - идентификатор</code>
-<code>  //-   title   {string} - заголовок</code>
-<code>  //-   mods    {string} - список модификаторов</code>
-<code>  //- Вызов:</code>
-<code>        +modal('modal-demo-01', 'Заголовок', 'some')</code>
-<code>          .modal__body</code>
-<code>            p Текст</code>
-<code>          .modal__footer</code>
-<code>            button.btn(type='button', data-dismiss='modal') Закрыть</code>
-<code>&nbsp;</code>
-<code>  -</code>
-<code>    // список модификаторов</code>
-<code>    var allMods = '';</code>
-<code>    if(typeof(mods) !== 'undefined' && mods) {</code>
-<code>      var modsList = mods.split(',');</code>
-<code>      for (var i = 0; i < modsList.length; i++) {</code>
-<code>        allMods = allMods + ' modal--' + modsList[i].trim();</code>
-<code>      }</code>
-<code>    }</code>
-<code>&nbsp;</code>
-<code>  .modal(id=id, class=allMods, tabindex='-1', role='dialog')&attributes(attributes)</code>
-<code>    .modal__dialog(role='document')</code>
-<code>      .modal__content</code>
-<code>        .modal__header</code>
-<code>          span.close.modal__close(data-dismiss='modal', aria-label='Закрыть') #[span]</code>
-<code>          h4.modal__title!= title</code>
-<code>        block</code>
+<code>//- Все примеси в этом файле должны начинаться c имени блока (modal)
+</code>
+<code>
+</code>
+<code>mixin modal(id, title, mods)
+</code>
+<code>
+</code>
+<code>  //- Принимает:
+</code>
+<code>  //-   id      {string} - идентификатор
+</code>
+<code>  //-   title   {string} - заголовок
+</code>
+<code>  //-   mods    {string} - список модификаторов
+</code>
+<code>  //- Вызов:
+</code>
+<code>        +modal('modal-demo-01', 'Заголовок', 'some')
+</code>
+<code>          .modal__body
+</code>
+<code>            p Текст
+</code>
+<code>          .modal__footer
+</code>
+<code>            button.btn(type='button', data-dismiss='modal') Закрыть
+</code>
+<code>
+</code>
+<code>  -
+</code>
+<code>    // список модификаторов
+</code>
+<code>    var allMods = '';
+</code>
+<code>    if(typeof(mods) !== 'undefined' && mods) {
+</code>
+<code>      var modsList = mods.split(',');
+</code>
+<code>      for (var i = 0; i < modsList.length; i++) {
+</code>
+<code>        allMods = allMods + ' modal--' + modsList[i].trim();
+</code>
+<code>      }
+</code>
+<code>    }
+</code>
+<code>
+</code>
+<code>  .modal(id=id, class=allMods, tabindex='-1', role='dialog')&attributes(attributes)
+</code>
+<code>    .modal__dialog(role='document')
+</code>
+<code>      .modal__content
+</code>
+<code>        .modal__header
+</code>
+<code>          span.close.modal__close(data-dismiss='modal', aria-label='Закрыть') #[span]
+</code>
+<code>          h4.modal__title!= title
+</code>
+<code>        block
+</code>
 </pre>
             </div>
           </div>
