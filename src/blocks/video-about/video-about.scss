@@ -1,0 +1,142 @@
+// В этом файле должны быть стили для БЭМ-блока video-about, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+.video-about {
+
+  &__inner {
+    position: relative;
+    padding: 88px 0;
+  }
+
+  &__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 2;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 408px;
+    height: 720px;
+
+    &:hover {
+
+      .video-about__btn {
+        background-color: $color-main;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(45deg, #1f2126 0%, #302f2d 100%);
+      opacity: 0.7;
+      z-index: 3;
+      user-select: none;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    padding: 183px 32px 24px 32px;
+    color: #ffffff;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: rem(24px);
+    line-height: 36px;
+    text-transform: uppercase;
+    letter-spacing: 0.96px;
+    margin-bottom: 1.4rem;
+  }
+
+  &__desc {
+    font-size: rem(16px);
+    line-height: 22px;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin: 0 32px 24px 0;
+    border-radius: 50%;
+    background-color: rgba($text-color, 0.6);
+    transition: all 250ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: -125px;
+    right: -125px;
+    transform: translateY(-50%);
+  }
+
+  &__controls-icon {
+    fill: $text-color;
+    width: 44px;
+    height: 44px;
+    margin: auto;
+
+  }
+
+  &__controls-btn {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+
+    &:hover {
+      background-color: $color-main;
+    }
+
+    &:active {
+      background-color: lighten($color-main, 10%);
+    }
+  }
+}
+
+
+/* Hide Play button + controls on iOS */
+
+video::-webkit-media-controls {
+  display: none !important;
+}

@@ -1,0 +1,45 @@
+//- Все примеси в этом файле должны начинаться c имени блока (video-about)
+
+mixin video-about(mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +video-about('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' video-about--' + modsList[i].trim();
+      }
+    }
+
+  section.video-about(class=allMods)&attributes(attributes)
+    .video-about__inner.wrap
+      .video-about__items#videoAbout
+        - for (i = 0; i <= 10; i++)
+          .video-about__item
+            video.video-about__video(loop='', preload='auto', muted)
+              source(src='https://giant.gfycat.com/VerifiableTerrificHind.mp4', type='video/mp4')
+              source(src='https://giant.gfycat.com/VerifiableTerrificHind.webm', type='video/webm')
+              | Ваш браузер не поддерживает video
+            .video-about__body
+              .video-about__content
+                h3.video-about__title
+                  | Скидка 20% на услуги дата-центра при оплате за год
+                p.video-about__desc
+                  | Отличная возможность для бизнеса сократить расходы на инфраструктуру
+              .video-about__btn
+                svg.video-about__icon(width='20', height='20')
+                    use(xlink:href='img/sprite-svg.svg#right-arrow')
+      .video-about__controls
+        button.btn.video-about__controls-btn
+          svg.video-about__controls-icon(width='20', height='20')
+            use(xlink:href='img/sprite-svg.svg#left-arrow')
+        button.btn.video-about__controls-btn
+          svg.video-about__controls-icon(width='20', height='20')
+            use(xlink:href='img/sprite-svg.svg#right-arrow')

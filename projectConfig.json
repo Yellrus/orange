@@ -77,7 +77,8 @@
     "title": [],
     "sidebar": [],
     "assistant": [],
-    "events": []
+    "events": [],
+    "video-about": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
