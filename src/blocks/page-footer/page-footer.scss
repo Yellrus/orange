@@ -5,4 +5,56 @@
 .page-footer {
 
   $block-name:                &; // #{$block-name}__element
+  min-height: 40vh;
+
+  &__panel {
+    width: 100%;
+    background-color: $color-main;
+  }
+
+  &__panel-inner {
+    justify-content: space-between;
+    color: $white;
+    padding: 29px 0 24px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      display: none;
+      background: transparent;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    flex: 1 0 auto;
+  }
+
+  &__nav-item {
+    text-decoration: none;
+    color: $white;
+
+    &:not(:last-child) {
+      margin-right: rem(50px);
+    }
+  }
+
+  &__dropdown {
+    display: flex;
+  }
+
+  &__select {
+    flex-basis: 100px;
+
+    &:not(:last-child) {
+      margin-right: rem(30px);
+    }
+  }
 }

@@ -1,21 +1,19 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function() {
 
-  if(document.getElementById('swipe-demo')) {
+  if (document.getElementById('swipe-panel')) {
 
-    window.mySwipe = new Swipe(document.getElementById('swipe-demo'), {
-      startSlide: 0,
-      speed: 400,
-      auto: 3000,
-      draggable: true,
-      continuous: true,
-      disableScroll: true,
-      stopPropagation: true,
-      callback: function(index, elem, dir) {},
-      transitionEnd: function(index, elem) {}
-    });
+      window.mySwipe = new Swipe(document.getElementById('swipe-panel'), {
+        startSlide: 0,
+        speed: 500,
+        draggable: true,
+        continuous: true,
+        disableScroll: true,
+        stopPropagation: true,
+      });
 
-    // включить видимость блока (по умолчанию скрыт)
-    document.getElementById('swipe-demo').classList.add('swipe--enable');
+      // включить видимость блока (по умолчанию скрыт)
+      document.getElementById('swipe-panel').classList.add('swipe--enable');
 
   }
+
 });

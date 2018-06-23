@@ -7,6 +7,7 @@
     "sprite-png": [
       "__demo"
     ],
+    "swipe": [],
     "page-header": [],
     "page-footer": [],
     "logo": [],
@@ -53,8 +54,6 @@
     "scroll-link": [],
     "to-top": [],
     "dropdown": [],
-    "owl-carousel": [],
-    "swipe": [],
     "off-canvas": [],
     "modal": [],
     "tabs": [],
@@ -78,15 +77,15 @@
     "sidebar": [],
     "assistant": [],
     "events": [],
-    "video-about": []
+    "video-about": [],
+    "partners": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "../../node_modules/swiper/dist/css/swiper.css",
-    "../../node_modules/tiny-slider/dist/tiny-slider.css",
-    "../../node_modules/owl.carousel/dist/assets/owl.carousel.css"
+    "../../node_modules/tiny-slider/dist/tiny-slider.css"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"
@@ -102,7 +101,6 @@
     "./node_modules/swiper/dist/js/swiper.min.js",
     "./node_modules/sticky-sidebar/dist/sticky-sidebar.min.js",
     "./node_modules/tiny-slider/dist/min/tiny-slider.js",
-    "./node_modules/owl.carousel/dist/owl.carousel.js",
     "./node_modules/swipejs/build/swipe.min.js",
     "./node_modules/object-fit-images/dist/ofi.js",
     "./node_modules/baron/baron.min.js"

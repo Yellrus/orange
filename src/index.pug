@@ -25,10 +25,27 @@ block content
   +assistant()
   +events()
   +video-about()
+  +partners()
 
 block footer
   +page-footer()
-    p(style='min-height: 20vh; font-size: 4rem; padding: 20rem 0;') «Подвал»
+    .page-footer__panel
+      .page-footer__panel-inner
+          .page-footer__nav
+            a.page-footer__nav-item(href='#') Для граждан
+            a.page-footer__nav-item(href='#') Для бизнеса
+            a.page-footer__nav-item(href='#') Для стартапов
+            a.page-footer__nav-item(href='#') Для госсектора
+            a.page-footer__nav-item(href='#') Все разделы
+          .page-footer__dropdown
+            .field-select.page-footer__select
+              select#selectCity.field-select__select(name="city")
+                option(value="") Казань
+                option(value="") Наб. Челны
+            .field-select.page-footer__select
+              select#selectLang.field-select__select(name="city")
+                option(value="") РУС
+                option(value="") ENG
 
 //- block page-bottom
 //-   script(src="js/some.js")
