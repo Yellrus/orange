@@ -1,11 +1,9 @@
-// В этом файле должны быть стили для БЭМ-блока date, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока date, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .date {
 
-  $block-name:                &; // #{$block-name}__element
-
+  $block-name: &; // #{$block-name}__element
   display: flex;
   align-items: flex-start;
   color: rgba($text-color, 0.5);
@@ -30,5 +28,26 @@
 
   &__mounth {
     margin-bottom: 1px
+  }
+
+  &--size_lg {
+
+    #{$block-name}__number {
+      font-size: rem(40px);
+      margin-right: 6px;
+    }
+
+    #{$block-name}__mounth,
+    #{$block-name}__day {
+      font-size: rem(16px);
+    }
+
+    #{$block-name}__mounth {
+      margin-bottom: 0;
+    }
+  }
+
+  &--color_black {
+    color: $text-color;
   }
 }

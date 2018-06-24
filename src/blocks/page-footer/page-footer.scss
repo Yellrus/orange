@@ -74,6 +74,13 @@
         padding-right: 10px;
       }
     }
+
+    @media (min-width: $screen-lg) {
+
+      &:not(:last-child) {
+        padding-right: 80px;
+      }
+    }
   }
 
   &__top {
@@ -105,7 +112,7 @@
     @media (min-width: $screen-lg) {
 
       &:not(:last-child) {
-        padding-right: 10px;
+        padding-right: 80px;
       }
     }
   }

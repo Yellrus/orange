@@ -41,18 +41,20 @@
     height: 100%;
   }
 
-  // &__wrap-item {
-  //   min-width: 256px;
-  //   max-width: 600px;
+  &__wrap-item {
+    position: relative;
+    padding-top: rem(51px);
 
-  //   @media (min-width: 1200px) {
-  //     min-width: 560px;
-  //   }
+    .date {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
-  //   @media (min-width: 1320px) {
-  //     max-width: 600px;
-  //   }
-  // }
+    .date__item {
+      color: $text-color;
+    }
+  }
 
   &__heading {
     max-width: 1224px;
