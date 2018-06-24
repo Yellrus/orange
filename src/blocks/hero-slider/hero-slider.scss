@@ -1,8 +1,7 @@
 .swiper-container {
   //display:inline-block;
   //vertical-align:top;
-  transition: opacity 0.6s ease, transform 0.3s ease;
-  //&:hover {
+  transition: opacity 0.6s ease, transform 0.3s ease; //&:hover {
   //  .swiper-button-prev,
   //  .swiper-button-next {
   //    transform: translateX(0);
@@ -21,6 +20,10 @@
   height: calc(100vw * (16 / 9));
   max-height: 100vh;
   min-height: rem(560px);
+
+  @media (min-width: $screen-lg) {
+    animation: fade-slide-down 2s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  }
 
   &__item {
     overflow: hidden;
@@ -205,12 +208,34 @@
   }
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
   bottom: 25px;
   left: 50%;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0;
 
   &:not(:last-child) {
