@@ -1,0 +1,23 @@
+// В этом файле должны быть стили для БЭМ-блока phrase, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.phrase {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__head {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: rem(24px);
+    margin-right: 1rem;
+  }
+
+  &__icon {
+    color: rgba($text-color, 0.4);
+    margin-bottom: 5px;
+  }
+}

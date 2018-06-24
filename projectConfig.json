@@ -78,7 +78,8 @@
     "assistant": [],
     "events": [],
     "video-about": [],
-    "partners": []
+    "partners": [],
+    "phrase": []
   },
   "addCssBefore": [
     "./src/scss/functions.scss",

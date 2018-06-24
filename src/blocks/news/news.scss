@@ -125,6 +125,25 @@
       font-size: rem(24px);
       line-height: 32px;
     }
+
+    span {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        bottom: 5px;
+        right: 0;
+        margin: 0 -28px 0 0;
+        background-image: svg-load('../img/share.svg', fill=#99999a);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 16px;
+      }
+    }
   }
 
   &__desc {

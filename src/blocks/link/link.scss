@@ -1,8 +1,9 @@
-// В этом файле должны быть стили для БЭМ-блока link, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока link, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .link {
+  text-decoration: none;
 
   $block-name:                &; // #{$block-name}__element
 
@@ -27,6 +28,40 @@
 
     &:hover::before {
       animation: animate 0.35s linear forwards;
+    }
+  }
+
+  &--line {
+    display: inline;
+    position: relative;
+    color: $text-color;
+    transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+    border-bottom: 1px solid rgba($text-color, 0.2);
+    padding: 0 0.3em;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 0;
+      position: absolute;
+      bottom: 0;
+      right: 0.25rem;
+      left: 0.25rem;
+      background-color: rgba($text-color, 0.2);
+      transition: all 0.35s cubic-bezier(0.2, 0, 0, 1);
+      transform-origin: bottom center;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $color-main;
+
+      &::after {
+        right: 0;
+        left: 0;
+        height: 100%;
+      }
     }
   }
 }

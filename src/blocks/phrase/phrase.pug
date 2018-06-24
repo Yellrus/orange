@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (phrase)
+
+mixin phrase(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +phrase('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' phrase--' + modsList[i].trim();
+      }
+    }
+
+  .phrase(class=allMods)&attributes(attributes)
+    .phrase__inner!= text

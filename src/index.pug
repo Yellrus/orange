@@ -12,7 +12,7 @@ block header
     .page-header__top
       .page-header__panel
         +logo('/')
-          img(src='./img/logo-white.png', width='48', height='72', alt='It Park &mdash; Казань')
+          img(src='./img/logo-white.png', width='48', height='72', alt='It Park')
         +nav-semi()
       .page-header__burger
         +burger()
@@ -46,6 +46,58 @@ block footer
               select#selectLang.ui-dropdown__select(name='city')
                 option(value='') РУС
                 option(value='') ENG
+    .page-footer__content.wrap
+      .page-footer__top
+          .page-footer__logo
+            +logo('/')
+              img(src='./img/logo-color.png', width='48', height='72', alt='It Park')
+          .page-footer__phone
+            span.page-footer__phone-title Тел.:
+            a.page-footer__phone-link(href='tel:+78432351875') +7 (843) 235-18-75
+      .page-footer__items
+        .page-footer__item
+          address.page-footer__address
+            p.page-footer__address-item
+              | © ГАУ «Технопарк в сфере высоких технологий «ИТ-парк»
+            p.page-footer__address-item ул. Петербургская, 52, Казань, Татарстан, 420074
+            p.page-footer__address-item
+              | Эл. почта:&nbsp;
+              a.link.link--line(href='mailto:it.park@tatar.ru') it.park@tatar.ru
+
+          .page-footer__socials
+            +ui-social()
+
+          .page-footer__app
+            span.page-footer__app-title Приложение
+            .page-footer__app-item
+              a.page-footer__app-link(href='#', target='_blank', rel='noopener noreferrer')
+                svg(width="19", height="19")
+                  use(xlink:href="img/sprite-svg.svg#apple-logo")
+                span App Store
+            .page-footer__app-item
+              a.page-footer__app-link(href='#', target='_blank', rel='noopener noreferrer')
+                svg(width="16", height="16")
+                  use(xlink:href="img/sprite-svg.svg#google-play")
+                span Google Play
+
+        .page-footer__item
+          .page-footer__report
+            a.page-footer__report-link(href='#')
+              span Сообщить об ошибке
+            a.page-footer__report-link(href='#')
+              span Сообщить о коррупции
+            a.page-footer__report-link(href='#')
+              span Политика в области защиты персональных данных
+            a.page-footer__report-link(href='#')
+              span Политика СМИБ
+
+          section.phrase
+            .phrase__head
+              h3.phrase__title Фраза дня
+              svg.phrase__icon(width="16", height="16")
+                use(xlink:href="img/sprite-svg.svg#share")
+            p.phrase__text
+              | Продуктивность — это способность человека создавать за определенный промежуток времени некое количество действий
 
 //- block page-bottom
 //-   script(src='js/some.js')
