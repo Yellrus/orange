@@ -30,7 +30,7 @@ block content
 block footer
   +page-footer()
     .page-footer__panel
-      .page-footer__panel-inner
+      .page-footer__panel-inner.wrap
           .page-footer__nav
             a.page-footer__nav-item(href='#') Для граждан
             a.page-footer__nav-item(href='#') Для бизнеса
@@ -38,14 +38,14 @@ block footer
             a.page-footer__nav-item(href='#') Для госсектора
             a.page-footer__nav-item(href='#') Все разделы
           .page-footer__dropdown
-            .field-select.page-footer__select
-              select#selectCity.field-select__select(name="city")
-                option(value="") Казань
-                option(value="") Наб. Челны
-            .field-select.page-footer__select
-              select#selectLang.field-select__select(name="city")
-                option(value="") РУС
-                option(value="") ENG
+            .ui-dropdown
+              select#selectCity.ui-dropdown__select(name='city')
+                option(value='') Казань
+                option(value='') Наб. Челны
+            .ui-dropdown
+              select#selectLang.ui-dropdown__select(name='city')
+                option(value='') РУС
+                option(value='') ENG
 
 //- block page-bottom
-//-   script(src="js/some.js")
+//-   script(src='js/some.js')

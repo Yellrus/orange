@@ -85,6 +85,7 @@
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "../../node_modules/swiper/dist/css/swiper.css",
+    "../../node_modules/select2/dist/css/select2.css",
     "../../node_modules/tiny-slider/dist/tiny-slider.css"
   ],
   "addCssAfter": [
@@ -99,6 +100,7 @@
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/ismobilejs/isMobile.min.js",
     "./node_modules/swiper/dist/js/swiper.min.js",
+    "./node_modules/select2/dist/js/select2.min.js",
     "./node_modules/sticky-sidebar/dist/sticky-sidebar.min.js",
     "./node_modules/tiny-slider/dist/min/tiny-slider.js",
     "./node_modules/swipejs/build/swipe.min.js",

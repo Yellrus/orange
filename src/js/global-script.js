@@ -29,6 +29,11 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
   }
 }
 
+$('.ui-dropdown__select').select2({
+  allowClear: false,
+  minimumResultsForSearch: Infinity
+});
+
 
 // toggle grid
 var grid = true;

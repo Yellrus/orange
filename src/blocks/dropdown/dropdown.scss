@@ -1,63 +1,109 @@
 // В этом файле должны быть стили для БЭМ-блока dropdown, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+$text-color: hsl(0, 0%, 10%) !default;
 
-$text-color:                  hsl(0, 0%, 10%) !default;
+$border-color: hsl(0, 0%, 60%) !default;
 
-$border-color:                hsl(0, 0%, 60%) !default;
+$border-radius: rem(3px) !default;
 
-$border-radius:               rem(3px) !default;
+$transition-time: 0.3s !default;
 
-$transition-time:             0.3s !default;
+// .dropdown {
+//   $block-name:                &; // #{$block-name}__element
+//   position: relative;
+//   display: inline-block;
+//   &__menu {
+//     position: absolute;
+//     z-index: -1;
+//     top: 100%;
+//     left: 0;
+//     max-width: 90vw;
+//     width: 1px;
+//     margin: 0;
+//     background-color: #fff;
+//     color: $text-color;
+//     opacity: 0;
+//     visibility: hidden;
+//     overflow: hidden;
+//     transition: opacity $transition-time;
+//   }
+//   &--open {
+//     #{$block-name}__menu {
+//       z-index: 1;
+//       visibility: visible;
+//       opacity: 1;
+//       width: auto;
+//     }
+//   }
+//   &--up {
+//     #{$block-name}__menu {
+//       top: auto;
+//       bottom: 100%;
+//     }
+//   }
+//   &--right {
+//     #{$block-name}__menu {
+//       left: auto;
+//       right: 0;
+//     }
+//   }
+// }
+.ui-dropdown {
 
-.dropdown {
-
-  $block-name:                &; // #{$block-name}__element
-
-  position: relative;
-  display: inline-block;
-
-  &__menu {
-    position: absolute;
-    z-index: -1;
-    top: 100%;
-    left: 0;
-    max-width: 90vw;
-    width: 1px;
-    margin: 0;
-    background-color: #fff;
-    color: $text-color;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    transition: opacity $transition-time;
+  &:not(:last-child) {
+    margin-right: rem(30px);
   }
 
 
-
-  &--open {
-
-    #{$block-name}__menu {
-      z-index: 1;
-      visibility: visible;
-      opacity: 1;
-      width: auto;
-    }
+  .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border: none;
+    width: 15px;
+    height: 5px;
+    background-image: svg-load('../blocks/field-select/bg-img/down-arrow.svg', fill=#fff);
+    background-repeat: no-repeat;
+    background-position: right 0.3em center;
+    background-size: 80%;
   }
 
-  &--up {
-
-    #{$block-name}__menu {
-      top: auto;
-      bottom: 100%;
-    }
+  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border: none;
+    outline: none;
   }
 
-  &--right {
-
-    #{$block-name}__menu {
-      left: auto;
-      right: 0;
-    }
+  .select2-container--default .select2-selection--single {
+    background-color: transparent;
+    border: none;
+    outline: none;
   }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #ffffff;
+    font-family: $font-family;
+    font-size: rem(13px);
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    letter-spacing: 0.52px;
+  }
+
+  .select2-container {
+    min-width: 62px;
+  }
+
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: $text-color;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: $white;
+  color: $text-color;
+}
+
+.select2-dropdown {
+  border: none;
+  box-shadow: $shadow;
 }

@@ -20,8 +20,6 @@ $border-radius:               rem(3px) !default;
     @include field-name;
   }
 
-  &__input-wrap {}
-
   &__select {
     display: inline-block;
     vertical-align: middle;
@@ -34,7 +32,7 @@ $border-radius:               rem(3px) !default;
     border-radius: $border-radius;
     appearance: none;
     background-color: #fff;
-    background-image: svg-load('../blocks/field-select/bg-img/select-down.svg');
+    background-image: svg-load('../blocks/field-select/bg-img/down-arrow.svg', fill=#fff);
     background-repeat: no-repeat;
     background-position: right 0.3em center;
     background-size: 1.063em 0.688em;
